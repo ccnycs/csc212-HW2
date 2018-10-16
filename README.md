@@ -1,7 +1,6 @@
 Given the **Point** class defined in the attached "point.h" and the **Sphere** class described in the following declaration (and in the attached "student.h")
 
-```
-#!c++
+```cpp
 class Sphere{
  private:
    Point center;
@@ -22,8 +21,7 @@ Add the following functionality:
 
 Constructors
 --------------------------------------
-```
-#!c++
+```cpp
 Sphere::Sphere(){}
 Sphere::Sphere(Point c, double r){...}
 ```
@@ -31,15 +29,13 @@ Implement the Sphere constructors. The second constructor must throw a **double*
 
 Getters
 ---------------------------------------
-```
-#!c++
+```cpp
 Point Sphere::getCenter(){...}
 double Sphere::getRadius(){...} 
 ```
 Implement functions to return the values of the private attributes of a Sphere object. For example, given:
 
-```
-#!c++
+```cpp
 Point P(0,0,0);
 Sphere S(P, 10);
 ```
@@ -49,7 +45,7 @@ Sphere S(P, 10);
 Methods: Area and Volume
 -------------------------------------------------------------------
 ```
-#!c++
+#cpp
 double Sphere::surfaceArea(){...}
 double Sphere::volume(){...}
 ```
@@ -61,8 +57,7 @@ Implement functions to compute the surface area and volume of a sphere, given th
 
 So, given the following code:
 
-```
-#!c++
+```cpp
 Point P(0,0,0);
 Sphere S(P, 1);
 ```
@@ -71,14 +66,12 @@ Sphere S(P, 1);
 
 Method: Logic
 
-```
-#!c++ 
+```cpp
 bool Sphere::in(Point P)
 ```
 Implement a function that checks whether a Point is inside the calling sphere. For example, given:
 
-```
-#!c++
+```cpp
 Point P(0,0,0);
 Sphere S(P, 1);
 Point P2(2,2);
@@ -91,14 +84,12 @@ Note: You do not have to account for the Point P possibly being on the boundary 
 
 Method: operator <
 ---------------------------------
-```
-#!c++
+```cpp
 bool Sphere::operator<(Sphere S){...}
 ```
 Overload the **<** operator so that it can be used to evaluate whether one sphere is bigger than another. For example, given:
 
-```
-#!c++
+```cpp
 Point P(0,0,0);
 Sphere S1(P,1);
 Sphere S2(P,2);
@@ -109,14 +100,12 @@ Sphere S3(P,3);
 
 friend: largest
 ------------------------------------------------------
-```
-#!c++
+```cpp
 Sphere largest(std::vector <Sphere> spheres){...}
 ```
 Implement a function that returns the largest sphere in a list of spheres. The function should throw an **integer** exception on empty input. Given:
 
-```
-#!c++
+```cpp
 Point P(0,0,0);
 Sphere S1(P,1);
 Sphere S2(P,2);
@@ -129,8 +118,7 @@ spheres[3] = S3;
 **largest(spheres)** should return a sphere *equal to S3*
 
 If the vector contains identical elements, such as in the following example:
-```
-#!c++
+```cpp
 Point P(0,0,0);
 Sphere S1(P, 1);
 Sphere S2(P, 1);
