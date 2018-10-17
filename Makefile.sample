@@ -9,7 +9,7 @@ main:
 	$(CC) $(CXXFLAGS) -o main $(CLASSES) main.cpp 
 
 test: 
-	$(CC) $(CXXFLAGS) -o test $(CLASSES) test.cpp $(GTFLAGS) 
+	$(CC) $(CXXFLAGS) -o test $(CLASSES) unit_tests.cpp $(GTFLAGS) 
 
 clean:
 	rm -rf *.o *.gch *~ test main
