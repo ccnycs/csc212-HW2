@@ -7,17 +7,17 @@ os: linux
 addons:
     apt:
         sources:
-        - ubuntu-toolchain-r-test
+           - ubuntu-toolchain-r-test
         packages:
-        - gcc-7
-        - g++-7
+           - gcc-7
+           - g++-7
 
 before_install:
-	- mkdir build
+    - mkdir build
     - cd build
     - cmake ..
 script:
-    - make test
+    - make tests
     - ./tests
 
 

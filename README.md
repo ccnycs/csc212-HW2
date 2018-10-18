@@ -1,4 +1,4 @@
-Given the **Point** class defined in the attached "point.h" and the **Sphere** class described in the following declaration (and in the attached "student.h")
+Given the **Point** class defined in the attached "point.h" and the **Sphere** class described in the following declaration (and in the attached "sphere.h")
 
 ```cpp
 class Sphere{
@@ -44,8 +44,7 @@ Sphere S(P, 10);
 
 Methods: Area and Volume
 -------------------------------------------------------------------
-```
-#cpp
+```cpp
 double Sphere::surfaceArea(){...}
 double Sphere::volume(){...}
 ```
@@ -132,34 +131,9 @@ spheres[3] = S3;
 
 Notes
 =====
-* Submit your "student.h" file. 
-* **Do not submit a main!**
+* Submit a "sphere.h" file. 
 * You **must** use the provided declaration and prototypes and return the specified values. 
 * You may add attributes, methods, and standalone functions, but do not remove anything from the provided file. 
-* Write a standalone test file to test your implementation **before** you submit it the online.
+* Write a standalone test (you may use the provided main as a starter) file to test your implementation **before** you submit it online.
 * You **must** match the output exactly (including spelling, capitalization, punctuation, and spacing). I will not answer emails unless they clearly demonstrate that **all** the directions were followed.
 
-
-Submitting Code
-===============
-
-1. Click on Content in the left hand panel.
-2. Go to the Homework 6 Submission
-3. Paste in your solution
-4. Hit run
-5. View test results
-6. Hit submit grade
-
-You can resubmit your code until the due date, but **do not**  use the submission window as a compiler. Make sure to compile, run and test your code first.
-
-You **must use Firefox** to submit your homework. We cannot get Chrome or Internet Explorer to work properly. You can get Firefox at [http://www.mozilla.org/en-US/firefox/new/](http://www.mozilla.org/en-US/firefox/new/)
-
-You must first go to [https://134.74.146.30](https://134.74.146.30) Initially you will find this site blocked. It will say this connection is "untrusted".
-
-
-1. click the text "I understand the Risks".
-2. click Add Exception (button)
-3. click the "Get Certificate" button
-4. click the "confirm the security exception"
-
-You should see "Welcome to nginx!" at [https://134.74.146.30](https://134.74.146.30) in Firefox. If you see that, everything should be ok. You then can go to blackboard with **Firefox**. You can't switch browers. The certificate you accepted only works for Firefox.
