@@ -17,8 +17,8 @@ class Sphere{
     Point center;
     double radius;
   public:
-    Sphere();
-    Sphere(double c);
+    Sphere(){};
+    Sphere(double r);
     Sphere(Point o, double r);
     Point getCenter();
     double getRadius();
