@@ -58,7 +58,7 @@ TEST_F(SphereTest, TestVolume){
   double r = pow((3*volume)/(4*T_PI), 1/3.);
   Sphere S(init, r);
   ASSERT_DOUBLE_EQ(volume, S.volume());
-};
+}
 
 TEST_F(SphereTest, TestInTrue){
   double r = rand()%10+10;
@@ -66,9 +66,9 @@ TEST_F(SphereTest, TestInTrue){
   Point init = randPoint(x,y,z);
   Sphere S(init, r);
   
-  int p1 = x+(r/2.0)*pow(-1,rand()%2);
-  int p2 = y+(r/2.0)*pow(-1,rand()%2);
-  int p3 = z+(r/2.0)*pow(-1,rand()%2);
+  double p1 = x+(r/2.0)*pow(-1,rand()%2);
+  double p2 = y+(r/2.0)*pow(-1,rand()%2);
+  double p3 = z+(r/2.0)*pow(-1,rand()%2);
 
   Point P(p1, p2, p3);
   ASSERT_EQ(true, S.in(P));
@@ -76,16 +76,16 @@ TEST_F(SphereTest, TestInTrue){
 
 TEST_F(SphereTest, TestInFalse){   
   double r = rand()%10+10;
-  double x,y,z;
+  double x, y, z;
   Point init = randPoint(x,y,z);
   Sphere S(init, r);
-  int xt = x+(r*2)*pow(-1,rand()%2);
+  double xt = x+(r*2)*pow(-1,rand()%2);
   Point P1(xt, y, z);
   ASSERT_EQ(false, S.in(P1));
-  int yt = y+(r*2)*pow(-1,rand()%2);
+  double yt = y+(r*2)*pow(-1,rand()%2);
   Point P2(x, yt, z);
   ASSERT_EQ(false, S.in(P2));
-  int zt = z+(r*2)*pow(-1,rand()%2);
+  double zt = z+(r*2)*pow(-1,rand()%2);
   Point P3(z, y, zt);
   ASSERT_EQ(false, S.in(P3));
 }
@@ -119,12 +119,12 @@ TEST_F(SphereTest, TestLargestEmpty){
   ASSERT_THROW(largest(spheres), int);
 }
    
-TEST_F(SphereTest,TestLargestEqual){
+TEST_F(SphereTest, TestLargestEqual){
   double x,y,z;
   Point init = randPoint(x,y,z);
   double r = rand()%10 + 10;
   Sphere S(init, r);
-  int size = rand()%10+20;
+  int size = static_cast<int>(rand()%10+20);
   std::vector <Sphere> spheres(size, S);
   Sphere Actual = largest(spheres);
   
@@ -136,13 +136,13 @@ TEST_F(SphereTest,TestLargestEqual){
    
 TEST_F(SphereTest, TestLargestNotEqual){
   double r = rand()%10 + 10;
-  int size = rand()%10+20;
+  int size = static_cast<int>(rand()%10+20);
   int l = size-1;
   std::vector <Sphere> spheres(size);
-  double x[size];
-  double y[size];
-  double z[size];
-  double radius[size];
+  double *x = new double[size];
+  double *y = new double[size];
+  double *z = new double [size];
+  double *radius = new double[size];
   
   for (int i=0; i<size; i++){
     Point center = randPoint(x[i], y[i], z[i]);
