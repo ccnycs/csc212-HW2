@@ -6,6 +6,7 @@
 #include <cstdio>
 #include <cmath>
 #include <ctime>
+#include <exception>
 
 #include <gtest/gtest.h>
 #include "sphere.h"
@@ -28,7 +29,7 @@ class SphereTest : public testing::Test{
 TEST_F(SphereTest, TestConstructorInvalid){
    double radius = -1*(rand()%10+1);
    shapes::Point init(0,0, 0);
-   ASSERT_THROW(shapes::Sphere(init, radius), double);
+   ASSERT_THROW(shapes::Sphere(init, radius), std::invalid_argument);
 }
 
 TEST_F(SphereTest,TestGetPrivateAttrs){
@@ -116,7 +117,7 @@ TEST_F(SphereTest, TestLessFalse){
    
 TEST_F(SphereTest, TestLargestEmpty){
   std::vector <shapes::Sphere> spheres;
-  ASSERT_THROW(largest(spheres), int);
+  ASSERT_THROW(largest(spheres), std::out_of_range);
 }
    
 TEST_F(SphereTest, TestLargestEqual){

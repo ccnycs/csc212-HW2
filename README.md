@@ -25,7 +25,7 @@ Constructors
 Sphere::Sphere(){}
 Sphere::Sphere(Point c, double r){...}
 ```
-Implement the Sphere constructors. The second constructor must throw a **double** exception when given an invalid radius.
+Implement the Sphere constructors. The second constructor must throw a `invalid_argument` exception when given an invalid radius.
 
 Getters
 ---------------------------------------
@@ -102,7 +102,7 @@ friend: largest
 ```cpp
 Sphere largest(std::vector <Sphere> spheres){...}
 ```
-Implement a function that returns the largest sphere in a list of spheres. The function should throw an **integer** exception on empty input. Given:
+Implement a function that returns the largest sphere in a list of spheres. The function should throw an `out_of_range` exception on empty input. Given:
 
 ```cpp
 Point P(0,0,0);
@@ -131,9 +131,8 @@ spheres[3] = S3;
 
 Notes
 =====
-* Submit a "sphere.h" file. 
-* You **must** use the provided declaration and prototypes and return the specified values. 
-* You may add attributes, methods, and standalone functions, but do not remove anything from the provided file. 
-* Write a standalone test (you may use the provided main as a starter) file to test your implementation **before** you submit it online.
-* You **must** match the output exactly (including spelling, capitalization, punctuation, and spacing). I will not answer emails unless they clearly demonstrate that **all** the directions were followed.
+* Edit the **sphere.cpp** file. 
+* You **must** use the provided declarations and prototypes and return the specified values. 
+* You may add attributes, methods, and standalone functions, but do not remove anything from the provided files.
+
 
