@@ -11,22 +11,22 @@
 #define SPHERE_H
 #pragma once
 
-
-class Sphere{
-  private:
-    Point center;
-    double radius;
-  public:
-    Sphere(){};
-    Sphere(double r);
-    Sphere(Point o, double r);
-    Point getCenter();
-    double getRadius();
-    double surfaceArea();
-    double volume();
-    bool in(Point P);
-    bool operator<(Sphere S);
-    Sphere friend largest(std::vector <Sphere> spheres);
-};
-
+namespace shapes{
+  class Sphere{
+    private:
+      Point center;
+      double radius;
+    public:
+      Sphere(){};
+      Sphere(double r);
+      Sphere(Point o, double r);
+      Point getCenter();
+      double getRadius();
+      double surfaceArea();
+      double volume();
+      bool in(Point P);
+      bool operator<(Sphere S);
+      Sphere friend largest(std::vector <Sphere> spheres);
+  };
+}
 #endif
